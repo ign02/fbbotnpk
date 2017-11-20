@@ -28,7 +28,7 @@ app.get('/webhook', function(req, res) {
 app.get('/web', function(req, res) {
 	let posttxt = urlencode("已完成機器人佈署！", 'utf-8');
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(`<html><head><title>Facebook Messenger Bot</title></head><body><h1>Facebook Messenger Bot</h1>${fbShortenToken} design by <a href='https://www.facebook.com/jing.pan.5'>JingPan</a>.<br><br><iframe src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjing.pan.5%2Fposts%2F1710206618990813&width=500&show_text=true&appId=515825845433689&height=671' width='500' height='671' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true'></iframe></body></html>`);
+    res.write(`<html><head><title>Facebook Messenger Bot</title></head><body><h1>Facebook Messenger Bot</h1>${posttxt} design by <a href='https://www.facebook.com/jing.pan.5'>JingPan</a>.<br><br><iframe src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjing.pan.5%2Fposts%2F1710206618990813&width=500&show_text=true&appId=515825845433689&height=671' width='500' height='671' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true'></iframe></body></html>`);
     res.end();
   });
   app.post('/webhook', function (req, res) {
